@@ -11,3 +11,21 @@ record screen ,desktop,and application
 包含的开源组件
 	ffmpeg 音频处理
 	opencv 视频处理
+	
+GSRecord ---- VWriter(Video)
+    |  |
+	|  |______ACapture(Audio)
+	| 
+	|_________SCapture(Screen)
+	
+	ffmpeg sdk 编码
+	MP4
+	base data 
+	|
+	codec
+    |
+	interface
+	
+
+	
+	
