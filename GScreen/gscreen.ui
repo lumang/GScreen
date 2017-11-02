@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GScreenClass</class>
+ <widget class="QWidget" name="GScreenClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>437</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GScreen</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="gscreen.qrc">
+    <normaloff>:/GScreen/logo.png</normaloff>:/GScreen/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#back{
+	
+	background-color: rgb(78, 74, 85);
+	border-radius:15px;
+
+}
+
+#all{
+	background-color: rgb(35, 35, 35);
+}
+
+#timelabel{
+	
+	color: rgb(0, 185, 255);
+	font: 75 20pt &quot;黑体&quot;;
+    
+}</string>
+  </property>
+  <widget class="QWidget" name="back" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>1000</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="minButton">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>20</y>
+      <width>31</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/GScreen/mini.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>20</y>
+      <width>41</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/GScreen/close.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="all" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>801</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="recordButton">
+     <property name="geometry">
+      <rect>
+       <x>562</x>
+       <y>120</y>
+       <width>101</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton:!hover{
+	background-image: url(:/GScreen/record_normal.png);
+}
+
+QPushButton:hover{
+	
+	background-image: url(:/GScreen/record_hot.png);
+}
+
+QPushButton:pressed{
+	
+	background-image: url(:/GScreenrecord_pressed.png);
+    
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="urlEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>551</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>D:\video</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timelabel">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>290</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>00:00</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="gscreen.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GScreenClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>737</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GScreenClass</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>694</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>817</x>
+     <y>454</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
