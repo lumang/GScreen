@@ -12,6 +12,10 @@ public:
 	GScreen(QWidget *parent = 0);
 	~GScreen();
 
+	void timerEvent(QTimerEvent *e);
+
+public slots:
+    void record();
 private:
 	Ui::GScreenClass ui;
 };
